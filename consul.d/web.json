@@ -1,0 +1,17 @@
+{
+  "service": {
+    "name": "web",
+    "connect": {
+      "sidecar_service": {
+        "proxy": {
+          "upstreams": [
+            {
+              "destination_name": "socat",
+              "local_bind_port": 9191
+            }
+          ]
+        }
+      }
+    }
+  }
+}
